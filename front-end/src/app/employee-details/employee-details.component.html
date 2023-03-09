@@ -1,0 +1,50 @@
+<h1 style="margin: 2rem;"><h1 style="border: none;
+  border-radius: 15px 4px;
+  background: #4c036e;color:#fff;max-width: 10.5rem;">Rasyotek</h1> User Management System</h1>
+<div class="container">
+  <app-employee-form></app-employee-form>
+  </div>
+  <table class="table table-hover">
+      <thead class="thead" style="background: #4c036e;color: #fff;">
+       <tr>
+        <th>Ad</th>
+        <th>Soyad</th>
+        <th>Email</th>
+        <th>Doğum Tarihi</th>
+        <th>University</th>
+        <th>Yaş</th>
+        <th>Düzenleme</th>
+        
+        
+       </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let emp of empService.listEmployee"> 
+          <td>{{emp.name}}</td>
+          <td>{{emp.lastName}}</td>
+          <td>{{emp.email}}</td>
+          <td>{{emp.doj | date:'yyyy-MM-dd' }}</td>
+          <td>{{emp.designation}}<p><tr *ngFor="let emp of empService.listUnis">
+            <td>{{emp.name}}</td>
+          </tr></p></td>
+          <td>{{emp.age}}</td>
+          
+          
+          
+          <td>
+            
+            <div class="dropdown">
+                <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                 Düzenle
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <a class="dropdown-item" href="#" (click)="populateEmployee(emp)">Edit</a>
+                  <a class="dropdown-item" href="#" (click)="delete(emp.id)">Delete</a>
+                  
+                </div>
+              </div>
+          </td>
+        </tr>
+        
+      </tbody>
+  </table>

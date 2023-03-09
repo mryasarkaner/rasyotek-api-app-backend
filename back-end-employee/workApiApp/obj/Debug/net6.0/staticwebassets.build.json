@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "iC75vgez6dbXTTd92wA51CEoN+/QMqDPZmZ2yaU57uc=",
+  "Source": "workApiApp",
+  "BasePath": "_content/workApiApp",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
